@@ -20,15 +20,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="准备">
+<meta name="description" content="前言本来发行版是打算试试 Debian 11, 直连模式下安装相当顺利，后来装 NV 闭源驱动 Wayland 炸了，回滚开源驱动哦nouveau无法恢复（虽然 Wayland 目前不够完善，但强迫症属实难受），混合模式重新安装直接无法启动，尝试加载AMD GPU 固件修复仍然无法启动，遂连夜逃离到 Arch 准备U盘Arch 盒装安装介质良好的网络没有困难的工作，只有勇敢的打工人的决心。 此外，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="拯救者R7000 Arch Linux 安装小记">
 <meta property="og:url" content="http://example.com/2021/08/23/R7000%20Arch%20Linux%E5%AE%89%E8%A3%85%E5%B0%8F%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="准备">
+<meta property="og:description" content="前言本来发行版是打算试试 Debian 11, 直连模式下安装相当顺利，后来装 NV 闭源驱动 Wayland 炸了，回滚开源驱动哦nouveau无法恢复（虽然 Wayland 目前不够完善，但强迫症属实难受），混合模式重新安装直接无法启动，尝试加载AMD GPU 固件修复仍然无法启动，遂连夜逃离到 Arch 准备U盘Arch 盒装安装介质良好的网络没有困难的工作，只有勇敢的打工人的决心。 此外，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-23T09:42:54.000Z">
-<meta property="article:modified_time" content="2021-08-23T09:50:07.759Z">
+<meta property="article:modified_time" content="2021-08-23T10:25:51.238Z">
 <meta property="article:author" content="waitlamp">
 <meta name="twitter:card" content="summary">
 
@@ -108,7 +108,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8%E9%95%9C%E5%83%8F"><span class="nav-number">3.</span> <span class="nav-text">制作启动镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%EF%BC%88%E6%9C%89%E7%A9%BA%E5%86%8D%E8%A1%A5%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">安装过程（有空再补）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%8F%E8%94%BD-Nvidia-%E7%8B%AC%E6%98%BE"><span class="nav-number">5.</span> <span class="nav-text">屏蔽 Nvidia 独显</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -188,7 +188,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-23 17:42:54 / 修改时间：17:50:07" itemprop="dateCreated datePublished" datetime="2021-08-23T17:42:54+08:00">2021-08-23</time>
+      <time title="创建时间：2021-08-23 17:42:54 / 修改时间：18:25:51" itemprop="dateCreated datePublished" datetime="2021-08-23T17:42:54+08:00">2021-08-23</time>
     </span>
 
   
@@ -201,7 +201,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本来发行版是打算试试 Debian 11, 直连模式下安装相当顺利，后来装 NV 闭源驱动 Wayland 炸了，回滚开源驱动哦nouveau无法恢复（虽然 Wayland 目前不够完善，但强迫症属实难受），混合模式重新安装直接无法启动，尝试加载AMD GPU 固件修复仍然无法启动，遂连夜逃离到 Arch</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>U盘<del>Arch 盒装安装介质</del><br>良好的网络<br>没有困难的工作，只有勇敢的打工人的<strong>决心</strong>。</p>
+<p>此外，建议白天安装，否则笔电的<strong>响铃</strong>绝对提神醒脑ORZ。</p>
+<h2 id="制作启动镜像"><a href="#制作启动镜像" class="headerlink" title="制作启动镜像"></a>制作启动镜像</h2><p>使用 rufus 或者 balenaetcher 均可</p>
+<h2 id="安装过程（有空再补）"><a href="#安装过程（有空再补）" class="headerlink" title="安装过程（有空再补）"></a>安装过程（有空再补）</h2><p>网络安装教程需要注意的是，实际安装时，<code>lsblk</code>命令看到的是类似<code>nvme1n1p1</code>的分区。不要生搬硬套<code>sda1</code><br>借用 <a target="_blank" rel="noopener" href="https://www.debian.org/releases/stable/amd64/ch03s02.zh-cn.html">Debian 安装手册</a> 的一句话 (?为什么要在arch安装小记引用Debian安装手册)</p>
+<blockquote>
+<p>两分钟的思考可能会为您节省几个小时的不必要的恢复工作。 </p>
+</blockquote>
+<h2 id="屏蔽-Nvidia-独显"><a href="#屏蔽-Nvidia-独显" class="headerlink" title="屏蔽 Nvidia 独显"></a>屏蔽 Nvidia 独显</h2><p>首先，需要一个Linus怒斥英伟达名场面：  </p>
+<iframe src="//player.bilibili.com/player.html?aid=70951224&bvid=BV1EE411Z7J2&cid=122934671&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+这样做有几个原因  
++ Optimus 实在让人头疼  
++ NV 的闭源驱动暂时还未支持 Wayland  
++ 开源驱动 nouveau 在 wayland 上也有点小问题（之前在 debian 测试 alacritty 输入卡顿）  
++ 我暂时没有什么炼丹需求，不需要 Cuda  
+
+<p>所以这里使用简单粗暴的方法，直接禁用nvidia独显。<br>使用 <a target="_blank" rel="noopener" href="https://github.com/nix-community/acpi_call">acpi_call</a><br>原项目太久没有维护，这里使用nix-community维护的版本。</p>
+
     </div>
 
     
