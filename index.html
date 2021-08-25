@@ -180,10 +180,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-08-23 17:42:54 / 修改时间：18:25:51" itemprop="dateCreated datePublished" datetime="2021-08-23T17:42:54+08:00">2021-08-23</time>
+      <time title="创建时间：2021-08-23 17:42:54" itemprop="dateCreated datePublished" datetime="2021-08-23T17:42:54+08:00">2021-08-23</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-25 18:19:07" itemprop="dateModified" datetime="2021-08-25T18:19:07+08:00">2021-08-25</time>
+      </span>
 
   
 </div>
@@ -203,15 +209,17 @@
 <blockquote>
 <p>两分钟的思考可能会为您节省几个小时的不必要的恢复工作。 </p>
 </blockquote>
-<h2 id="屏蔽-Nvidia-独显"><a href="#屏蔽-Nvidia-独显" class="headerlink" title="屏蔽 Nvidia 独显"></a>屏蔽 Nvidia 独显</h2><p>首先，需要一个Linus怒斥英伟达名场面：  </p>
+<h2 id="屏蔽-Nvidia-独显"><a href="#屏蔽-Nvidia-独显" class="headerlink" title="屏蔽 Nvidia 独显"></a>屏蔽 Nvidia 独显</h2><p>首先，需要了解一下 Nvdia 显卡，以及 optimus 的Linux支持为什么让人头疼：  </p>
 <iframe src="//player.bilibili.com/player.html?aid=70951224&bvid=BV1EE411Z7J2&cid=122934671&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-这样做有几个原因  
-+ Optimus 实在让人头疼  
-+ NV 的闭源驱动暂时还未支持 Wayland  
-+ 开源驱动 nouveau 在 wayland 上也有点小问题（之前在 debian 测试 alacritty 输入卡顿）  
-+ 我暂时没有什么炼丹需求，不需要 Cuda  
+<br>屏蔽显卡有几个更具体的原因:</br>  
+<ul>
+ <li>Optimus 实在让人头疼</li>  
+ <li>NV 的闭源驱动暂时还未支持 Wayland</li>  
+ <li>开源驱动 nouveau 在 wayland 上也有点小问题（之前在 debian 测试 alacritty 输入卡顿）</li>  
+ <li>技术太菜不会炼丹，暂时不需要 Cuda</li>  
+</ul>
 
-<p>所以这里使用简单粗暴的方法，直接禁用nvidia独显。<br>使用 <a target="_blank" rel="noopener" href="https://github.com/nix-community/acpi_call">acpi_call</a><br>原项目太久没有维护，这里使用nix-community维护的版本。</p>
+<p>所以这里使用简单粗暴的方法，直接禁用nvidia独显。<br>使用<a target="_blank" rel="noopener" href="https://github.com/nix-community/acpi_call">acpi_call</a><br>原项目太久没有维护，这里使用nix-community维护的版本。<br>在<code>turn_off_gpu.sh</code>脚本内添加如下acpi字符串<br><code>\_SB.PCI0.GPP0.PG00._OFF</code><br>其余步骤参考<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/hybrid_graphics">Arch Wiki</a>即可</p>
 
       
     </div>
