@@ -188,7 +188,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-25 18:19:07" itemprop="dateModified" datetime="2021-08-25T18:19:07+08:00">2021-08-25</time>
+        <time title="修改时间：2021-08-25 18:20:25" itemprop="dateModified" datetime="2021-08-25T18:20:25+08:00">2021-08-25</time>
       </span>
 
   
@@ -202,7 +202,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本来发行版是打算试试 Debian 11, 直连模式下安装相当顺利，后来装 NV 闭源驱动 Wayland 炸了，回滚开源驱动哦nouveau无法恢复（虽然 Wayland 目前不够完善，但强迫症属实难受），混合模式重新安装直接无法启动，尝试加载AMD GPU 固件修复仍然无法启动，遂连夜逃离到 Arch</p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>U盘<del>Arch 盒装安装介质</del><br>良好的网络<br>没有困难的工作，只有勇敢的打工人的<strong>决心</strong>。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>U盘（<del>Arch Linux盒装安装介质</del>）<br>良好的网络<br>没有困难的工作，只有勇敢的打工人的<strong>决心</strong>。</p>
 <p>此外，建议白天安装，否则笔电的<strong>响铃</strong>绝对提神醒脑ORZ。</p>
 <h2 id="制作启动镜像"><a href="#制作启动镜像" class="headerlink" title="制作启动镜像"></a>制作启动镜像</h2><p>使用 rufus 或者 balenaetcher 均可</p>
 <h2 id="安装过程（有空再补）"><a href="#安装过程（有空再补）" class="headerlink" title="安装过程（有空再补）"></a>安装过程（有空再补）</h2><p>网络安装教程需要注意的是，实际安装时，<code>lsblk</code>命令看到的是类似<code>nvme1n1p1</code>的分区。不要生搬硬套<code>sda1</code><br>借用 <a target="_blank" rel="noopener" href="https://www.debian.org/releases/stable/amd64/ch03s02.zh-cn.html">Debian 安装手册</a> 的一句话 (?为什么要在arch安装小记引用Debian安装手册)</p>
